@@ -1,0 +1,63 @@
+instructions for python setup
+-----------------------------
+1. check if the latest python is setup. Ubuntu comes pre loaded with python 3.8
+2. Command python will result in following:
+
+ubuntu:~$ python
+
+Command 'python' not found, did you mean:
+
+  command 'python3' from deb python3
+  command 'python' from deb python-is-python3
+3. command below should work:
+ubuntu:~$ python3
+Python 3.8.10 (default, Sep 28 2021, 16:10:42) 
+[GCC 9.3.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> 
+4. if you need to map the command python to python3 then:
+sudo ln -s /usr/bin/python3 /usr/bin/python
+5. try the command "python" again
+ubuntu:~$ python 
+Python 3.8.10 (default, Sep 28 2021, 16:10:42) 
+[GCC 9.3.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> 
+
+instructions for jupyter notebook setup:
+----------------------------------------
+1. update and upgrade packages
+sudo apt update && sudo apt -y upgrade
+2. install python3 pip
+sudo apt install python3-pip python3-dev
+3. upgrade pip version and install Python virtualenv:
+sudo -H pip3 install --upgrade pip
+sudo -H pip3 install virtualenv
+4. make directory "development" and enter
+cd ~ && mkdir -p development/python/notebook && cd development/python/notebook
+5. setup virtualenv in the notebook directory
+ubuntu:~/development/python/notebook$ virtualenv jupyterenv
+created virtual environment CPython3.8.10.final.0-64 in 205ms
+  creator CPython3Posix(dest=/home/avinash/development/python/notebook/jupyterenv, clear=False, no_vcs_ignore=False, global=False)
+  seeder FromAppData(download=False, pip=bundle, setuptools=bundle, wheel=bundle, via=copy, app_data_dir=/home/avinash/.local/share/virtualenv)
+    added seed packages: pip==21.3.1, setuptools==58.3.0, wheel==0.37.0
+  activators BashActivator,CShellActivator,FishActivator,NushellActivator,PowerShellActivator,PythonActivator
+6. activate virtualenv created above
+source jupyterenv/bin/activate
+
+ubuntu:~/development/python/notebook$ source jupyterenv/bin/activate
+(jupyterenv) ubuntu:~/development/python/notebook$ 
+
+7. install jupyter notebook
+pip install jupyter
+
+takes about 30s and jupyter is installed after all downloads
+8. start up jupyter notebook
+ubuntu:~/development/python/notebook$ jupyter notebook
+should start a page in the default browser at http://localhost:8888/tree
+9. Cntrl+C to exit notebook
+10. deactivate the virtual environment 
+(jupyterenv) ubuntu:~/Documents/Learning Company/TrainingCompany$ deactivate
+
+
+
