@@ -37,10 +37,8 @@ When visual studio code opens in the directory "business-layer"
 
 create the project specific folders and files
 ---------------------------------------------
-mkdir -p app/templates app/static
+mkdir -p app/templates app/static routes
 touch store.py
-touch config.py
-touch app/
 
 install and Flask inside the venv
 ---------------------------------
