@@ -1,5 +1,5 @@
 #blueprint for the routes for the Menu API
-from flask import Flask,jsonify,request, Blueprint
+from flask import Flask,jsonify,request, Blueprint,abort
 
 menu_blueprint = Blueprint('menu_blueprint', __name__)
 
@@ -22,3 +22,15 @@ def menu_post():
     print(f'the request from the browser is: {item_to_add}')
     arr_of_menuitems = {'id':'123456','name': 'new item','price': 5.0, 'category':'beverage' }   
     return jsonify(arr_of_menuitems)
+
+@menu_blueprint.route('/menu/<menuitem>',methods=['GET'])
+def menu_item_get(menuitem=None):
+    print(f'the menuitem in the request is {menuitem}')
+    #check if the menuitem is found in the system
+    #if the menuitem is found then return in reponse
+    menu_item_info = {'id':'123456','name': 'new item','price': 5.0, 'category':'beverage' }   
+    if(menuitem == '12345'):
+     return jsonify(menu_item_info)
+    else:
+        # return "not found", 404
+        abort(404, description="Resource not found")
