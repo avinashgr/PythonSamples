@@ -45,6 +45,7 @@
             }
             .nav-logo{
                 display: inline-block;
+                cursor: pointer;
             }
             .nav-logo img{
                 border-radius: 50%;
@@ -95,7 +96,9 @@
     </head>
     <body class="body" onload="initialize()">
         <div class="navbar">
-            <div class="nav-logo"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWAOqKf2hN0IjuKgufU7YNhEFJlMV9mdaTWQ&usqp=CAU" alt="Avatar" style="width:40px"></div>
+            <div class="nav-logo" onclick="showContents('home')">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWAOqKf2hN0IjuKgufU7YNhEFJlMV9mdaTWQ&usqp=CAU" alt="Avatar" style="width:40px">
+            </div>
             <div class="nav-menu-item" onclick="showContents('menu')">menu</div>
             <div class="nav-menu-item" onclick="showContents('users')">users</div>
             <div class="nav-menu-item" onclick="showContents('store')">store</div>
