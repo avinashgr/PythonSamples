@@ -25,6 +25,5 @@ def landing():
 
 @app.errorhandler(Exception)
 def handle_foo_exception(error):
-    response = jsonify(error.to_dict())
-    response.status_code = error.status_code
-    return response
+    print('handling the error for the exception')
+    return jsonify(e=str(error)), 404
