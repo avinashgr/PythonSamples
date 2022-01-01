@@ -1,0 +1,82 @@
+<!-- We update the html tom use the css in the folder css-->
+<html>
+    <head>
+        <title>Espress Yo</title>
+        <style>
+            .body{
+                background:gray; color: white;margin:0;
+                font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif !important;
+            }
+            .navbar{
+                width:100%;position:fixed;background-color: rgb(56, 47, 47);margin:0
+            }
+            .nav-logo{
+                display: inline-block;
+            }
+            .nav-logo img{
+                border-radius: 50%;
+            }
+            .nav-menu-item{
+                float:right;padding:10px;background-color: rgb(95, 72, 72);
+                /* border-style: solid none solid solid;border-width:4px; */
+            }
+            .nav-menu-item:hover{
+                background-color: rgb(192, 182, 182);
+                color:black;
+                cursor: pointer;
+            }
+            .main-page{
+                max-width: 500px;padding:15px;border-style: solid;border-width:4px; 
+                border-color: rgb(230, 214, 214);
+                text-align:center;
+                top:50%;left:50%;
+                transform: translate(-50%, -50%);
+                position: absolute;
+            }
+            .menu-page{
+                max-width: 500px;padding:15px;border-style: solid;border-width:4px; 
+                border-color: rgb(230, 214, 214);
+                text-align:center;
+                top:50%;left:50%;
+                transform: translate(-50%, -50%);
+                position: absolute;
+            }
+            .users-page{
+                max-width: 500px;padding:15px;border-style: solid;border-width:4px; 
+                border-color: rgb(230, 214, 214);
+                text-align:center;
+                top:50%;left:50%;
+                transform: translate(-50%, -50%);
+                position: absolute;
+            }
+            .store-page{
+                max-width: 500px;padding:15px;border-style: solid;border-width:4px; 
+                border-color: rgb(230, 214, 214);
+                text-align:center;
+                top:50%;left:50%;
+                transform: translate(-50%, -50%);
+                position: absolute;
+            }
+        </style>
+    </head>
+    <body class="body">
+        <div class="navbar">
+            <div class="nav-logo"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWAOqKf2hN0IjuKgufU7YNhEFJlMV9mdaTWQ&usqp=CAU" alt="Avatar" style="width:50px"></div>
+            <div class="nav-menu-item">menu</div>
+            <div class="nav-menu-item">users</div>
+            <div class="nav-menu-item">store</div>
+        </div>
+        <div class="main-page" id="home">
+            Hi This is a coffee shop 
+        </div>
+        <div class="menu-page" id="menu">
+            This is the menu page
+        </div>
+        <div class="users-page" id="users">
+            This is the users page
+        </div>        
+        <div class="store-page" id="store">
+            This is the store page
+        </div>
+    </body>
+</html>
