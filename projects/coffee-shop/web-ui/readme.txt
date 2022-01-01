@@ -10,7 +10,9 @@ python -m http.server
 
 Development includes the following:
 ----------------------------------
-HTML, CSS and JQuery (javascript with some utility functions)
+HTML, CSS and Javascript- initially to give an idea of how javascript and then
+Vue JS to simplify the development of the ui for the Python Backend coffeeshop application
+
 
 Description
 -----------
