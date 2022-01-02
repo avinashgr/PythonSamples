@@ -27,3 +27,11 @@ def landing():
 def handle_foo_exception(error):
     print('handling the error for the exception')
     return jsonify(e=str(error)), 404
+
+#adds the headers that common to all requests    
+@app.after_request
+def do_something_whenever_a_request_has_been_handled(response):
+    # we have a response to manipulate, always return one
+    #if the header is not added then the browser will not process the response
+    response.headers.add('Access-Control-Allow-Origin', '*')
+    return response
