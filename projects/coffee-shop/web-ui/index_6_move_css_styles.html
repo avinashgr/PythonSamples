@@ -1,0 +1,30 @@
+<!-- We update the html tom use the css in the folder css-->
+<html>
+    <head>
+        <title>Espress Yo</title>
+        <script src="./js/store_functions.js"></script>
+        <link rel="stylesheet" type="text/css" href="./css/store_page.css"/>
+    </head>
+    <body class="body" onload="initialize()">
+        <div class="navbar">
+            <div class="nav-logo" onclick="showContents('home')">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWAOqKf2hN0IjuKgufU7YNhEFJlMV9mdaTWQ&usqp=CAU" alt="Avatar" style="width:40px">
+            </div>
+            <div class="nav-menu-item" onclick="showContents('menu')">menu</div>
+            <div class="nav-menu-item" onclick="showContents('users')">users</div>
+            <div class="nav-menu-item" onclick="showContents('store')">store</div>
+        </div>
+        <div class="main-page" id="home">
+            Hi This is a coffee shop 
+        </div>
+        <div class="menu-page" id="menu">
+            This is the menu page
+        </div>
+        <div class="users-page" id="users">
+            This is the users page
+        </div>        
+        <div class="store-page" id="store">
+            This is the store page
+        </div>
+    </body>
+</html>
