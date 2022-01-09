@@ -54,15 +54,22 @@ Package       Version
 ------------- -------
 click         8.0.3  
 Flask         2.0.2  
+Flask-Cors    3.0.10 
 itsdangerous  2.0.1  
 Jinja2        3.0.3  
 MarkupSafe    2.0.1  
 pip           20.0.2 
 pkg-resources 0.0.0  
 setuptools    44.0.0 
+six           1.16.0 
 Werkzeug      2.0.2  
 
 in VSCode reload Developer Window using : CNTRL+SHIFT+P and then Developer: Reload Window
 this will reload the python workspace with any of the updated pip modules added to the venv
 
+to run the application
+----------------------
+cd business-layer
+source venv/bin/activate
+FLASK_APP=store.py flask run
 

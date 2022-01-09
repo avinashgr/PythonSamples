@@ -1,0 +1,14 @@
+instructions for python setup
+-----------------------------
+1. Install Docker
+2. Use the attched Dockerfile. Run the following Command from the parent folder.
+    sudo docker build -t ubuntu/jupyter .
+    docker run -td ubuntu/jupyter
+    docker exec -it {b2e0487e8cd609dbb1dfc15a8c2e0e6cb0bac5d9d693d82538742f6fb7302533} bash
+3. start up jupyter notebook
+    cd environments/development/python/notebook
+    jupyter notebook
+should start a page in the default browser at http://localhost:8888/tree
+4. Cntrl+C to exit notebook
+5. deactivate the virtual environment 
+(jupyterenv) $ deactivate

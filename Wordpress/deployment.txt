@@ -1,0 +1,43 @@
+Wordpress Website for bytecodecafe.com
+---------------------------------------------
+
+
+1.	Create an EC2 instance in GCP.
+2.  Instructions:
+		 apt upgrade -y && apt update -y
+		 apt install docker.io
+		 sudo apt install docker-compose
+		 docker volume create portainer_data
+		 
+		 docker run -d -p 9000:9000 --name portainer --restart always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:latest
+
+	 	 Create my-bridge under network
+	 	 Assign all containers to my-bridge
+	 	 Verify it
+
+3. Install nginx using portainer
+4. port mapping for 80&443 for nginx
+5. Login to nginx
+		 apt update && apt install nano -y
+		 nano /etc/nginx/conf.d/mywp.conf
+		 service nginx restart
+	 Set SSL
+	 	apt update
+		apt install certbot python-certbot-nginx ## May not work.
+		certbot --nginx
+		apt install python3-certbot-nginx  ## TRY THIS
+
+6.	Install wordpress from portainer.
+7. 	Login to wordpress CLI
+		apt update && apt install nano -y
+		nano conf.php
+8. Add paths for dns.
+9. Login to GCP
+		Create DNS zones
+		Create DNS Recordset
+		Copy the DNS names and configure the same in domains.google.com
+10 Add thr correct configurations for https in Wordpress and Nginx.
+
+
+
+

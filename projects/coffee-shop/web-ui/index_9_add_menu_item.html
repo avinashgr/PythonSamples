@@ -19,7 +19,16 @@
             Hi This is a coffee shop 
         </div>
         <div class="menu-page" id="menu">
-            This is the menu page <button id="getmenu" onclick="getMenuItems()">Get Menu</button>
+            <div style="display: inline-block"><button id="getmenu" onclick="getMenuItems()">Get Menu</button></div>
+            <div style="display: inline-block"><button id="addmenuitem" onclick="displayAddItemBox()">Add Item</button></div>
+            <div style="margin-top:15px;background-color: cornsilk;border-radius:5px;color:black;padding:10px">
+                <div style="margin: 15px;display: inline-block">Name: <input type="text" id="nameOfItem"/></div>
+                <div style="margin: 15px;display: inline-block">Price: <input type="text" id="priceOfItem"/></div>
+                <div style="margin: 15px;display: inline-block">Category: <input type="text" id="catOfItem"/></div>
+                <div style="margin: 15px;display: inline-block">Image: <input type="text" id="picOfItem"/></div>
+                <div style="margin: 15px;"><button id="addmenuitem" onclick="addAndRefresh()">Add</button></div>
+            </div>
+            <div style="width:100%" id="menu-items"></div>          
         </div>
         <div class="users-page" id="users">
             This is the users page

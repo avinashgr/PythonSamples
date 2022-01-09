@@ -29,9 +29,3 @@ function showContents(el){
         }
     })
 }
-//fetch content from the backend
-const getMenuItems = async () => {
-    const response = await fetch('http://localhost:5000/menu');
-    const menuitems = await response.json(); //extract JSON from the http response
-    console.log('the json from the backend is %j', menuitems)
-}

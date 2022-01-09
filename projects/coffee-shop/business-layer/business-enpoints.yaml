@@ -359,7 +359,21 @@ paths:
           '200':
             description: OK
             schema:
-              $ref: "#/definitions/MenuItem"               
+              $ref: "#/definitions/MenuItem"     
+      delete:
+        summary: "deletes the item specified in the menu item parameter"
+        produces:
+        - "application/xml"
+        - "application/json"
+        parameters:
+        - name: "menuitem"
+          in: "path"
+          description: "menu item to fetch"
+          required: true
+          type: "string"         
+        responses:
+          '200':
+            description: OK
 securityDefinitions:
   CoffeeShop_auth:
     type: "oauth2"
